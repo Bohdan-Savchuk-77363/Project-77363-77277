@@ -1,0 +1,13 @@
+.nav {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary);
+}
+
+.nav-link {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 700;
+}
