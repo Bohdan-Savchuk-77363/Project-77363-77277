@@ -1,9 +1,16 @@
+@import "header.css";
+@import "nav.css";
+@import "icon-list.css";
+
+:root {
+    --grey-color: #bebebe;
+    --primary: #2C3038;
+}
 
 html {
     box-sizing: border-box;
+    font-size: 62.5%;
 }
-
-
 
 *,
 *::after,
@@ -15,44 +22,14 @@ html {
 
 a {
     text-decoration: none;
-
-    
 }
-
 
 li {
     list-style-type: none;
-
 }
 
 body {
-    font-family: 'Times New Roman', serif;
-    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+    font-size: 1.6rem;
     font-weight: 400;
 }
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-
-.header-item {
-    padding: 5px 10px;
-    color: #000000;
-}
-
-
-
-.slider {
-    display: flex;
-    justify-content: space-between;
-}
-
-.slider__img {
-    width: 200px;
-    height: 300px;
-}
-    
