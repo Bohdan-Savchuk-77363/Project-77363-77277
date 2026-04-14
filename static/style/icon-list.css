@@ -13,5 +13,6 @@
     display: block;
     width: 3rem;
     height: 3rem;
-    stroke: var(--primary);
+    stroke: var(--light);
+    fill: var(--light);
 }

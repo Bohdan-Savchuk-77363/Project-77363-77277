@@ -42,8 +42,6 @@ body {
     font-family: "Manrope", sans-serif;
     font-size: 2rem;
     font-weight: 400;
-
-    background-color: var(--light-gray);
 }
 
 .container {
