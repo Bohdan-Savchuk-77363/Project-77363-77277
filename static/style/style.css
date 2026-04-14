@@ -4,6 +4,8 @@
 @import "slider.css";
 @import "hero.css";
 @import "btn.css";
+@import "recommendation.css";
+@import "section.css";
 
 :root {
     --gray-color: #bebebe;

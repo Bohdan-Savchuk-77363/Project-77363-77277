@@ -1,0 +1,26 @@
+.recommendation {
+    display: flex;
+    gap: 3rem;
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: deepskyblue;
+    padding: 1.5rem;
+
+    flex: 0 1 33.3333%;
+}
+
+.recommendation-img {
+    width: 175px;
+    height: 250px;
+    object-fit: cover;
+
+    
+}
+
+
+
