@@ -5,10 +5,11 @@
 
 .recommendation-item {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 1rem;
 
-    background-color: deepskyblue;
+    background-color: var(--gray-text);
+    color: var(--light);
     padding: 1.5rem;
 
     flex: 0 1 33.3333%;
@@ -18,9 +19,25 @@
     width: 175px;
     height: 250px;
     object-fit: cover;
-
-    
+    border-radius: 5px;
 }
 
+.recommendation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recommendation-title {
+    font-size: 2.4rem;
+}
+
+.recommendation-text {
+    font-size: 1.6rem;
+}
+
+.recommendation-footer {
+    text-align: end;
+}
 
 
