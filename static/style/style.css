@@ -8,6 +8,7 @@
 @import "section.css";
 @import "book-list.css";
 @import "arrow.css";
+@import "footer.css";
 
 :root {
     --gray-color: #bebebe;

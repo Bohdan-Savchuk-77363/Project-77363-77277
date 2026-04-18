@@ -11,6 +11,13 @@
     pointer-events: none;
 }
 
+
+.arrows--book {
+    left: -5rem;  
+    right: -5rem;
+}
+
+
 .arrow {
     pointer-events: all;
     background-color: transparent;
@@ -25,3 +32,5 @@
     height: 7rem;
     stroke: var(--gray-color);
 }
+
+
