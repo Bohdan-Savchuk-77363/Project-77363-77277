@@ -95,14 +95,14 @@
                         </div>
                     </div>
 
-                    <div class="slide-arrows">
-                        <button href="#" class="slide-arrow arrow-prev">
-                            <svg class="slide-arrow-icon">
+                    <div class="arrows">
+                        <button href="#" class="arrow" id="slide-prev-arrow">
+                            <svg class="arrow-icon">
                                 <use alt="arrow-left" href="../static/images/icon-sprite.svg#arrow-left"></use>
                             </svg>
                         </button>
-                        <button href="#" class="slide-arrow arrow-next">
-                            <svg class="slide-arrow-icon">
+                        <button href="#" class="arrow" id="slide-prev-next">
+                            <svg class="arrow-icon">
                                 <use alt="arrow-right" href="../static/images/icon-sprite.svg#arrow-right"></use>
                             </svg>
                         </button>
@@ -170,11 +170,57 @@
     </section>
 
 
-    <section class="section section--dark"></section>
+    <section class="section section--dark">
+        <div class="container">
 
-    <!-- Section with some recomandation or new film -->
+            <div class="book-list">
+                <h2 class="book-list-title">Book list title</h2>
+
+                <div class="book-slider">                  
+                    
+                    <!-- <div class="arrows">
+                        <button href="#" class="arrow slide-arrow-prev">
+                            <svg class="arrow-icon">
+                                <use alt="arrow-left" href="../static/images/icon-sprite.svg#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button href="#" class="arrow slide-arrow-next">
+                            <svg class="arrow-icon">
+                                <use alt="arrow-right" href="../static/images/icon-sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div> -->
+                
+                    <div class="book-slider-track-wrapper">
+                        <div class="book-slider-track" id="track">
+
+                            <template>
+
+                                <div class="book-сard">
+                                    <img src="https://placehold.co/175x250" alt="book.title" class="book-card-img">
+
+                                    <div class="book-card-body">
+                                        <h3 class="book-card-title">book title</h3>
+                                        <p class="book-card-author">author</p>
+                                        <div class="book-card-stars">
+                                            ★★★★★
+                                            <span class="book-card__rating-count">25.111</span>
+                                        </div>
+                                    </div>  
+                                </div>   
+
+                            </template>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
     
-    <script src="../static/script/script.js"></script>
+    <script type="module" src="../static/script/script.js"></script>
 
 </body>
 </html>

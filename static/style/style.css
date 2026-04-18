@@ -6,6 +6,8 @@
 @import "btn.css";
 @import "recommendation.css";
 @import "section.css";
+@import "book-list.css";
+@import "arrow.css";
 
 :root {
     --gray-color: #bebebe;

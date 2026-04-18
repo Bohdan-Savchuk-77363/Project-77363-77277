@@ -1,12 +1,13 @@
 .section {
     padding: 10rem 0;
-    background-color: var(--light-gray);
 }
 
 .section--light {
     background-color: var(--light-gray);
+    color: var(--primary);
 }
 
 .section--dark {
     background-color: var(--dark-gray);
+    color: var(--light);
 }

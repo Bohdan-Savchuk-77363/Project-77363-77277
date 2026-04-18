@@ -1,0 +1,27 @@
+.arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;  
+    right: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.arrow {
+    pointer-events: all;
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.arrow-icon {
+    width: 7rem;
+    height: 7rem;
+    stroke: var(--gray-color);
+}

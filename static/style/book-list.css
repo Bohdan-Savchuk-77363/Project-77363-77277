@@ -1,0 +1,61 @@
+.book-list-title {
+    margin-bottom: 4rem;
+}
+
+.book-slider {
+    position: relative;
+}
+
+.book-slider-track-wrapper {
+  overflow: hidden;
+  padding: 1rem 0.5rem 2rem;
+}
+
+.book-slider-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem;
+
+    flex: 0 0 calc((100% - 15rem) / 6);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    background-color: #202020;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+    }
+}
+
+/* Star */
+
+.star {
+    color: #ddd;
+    
+    &.filled {
+        color: #ffff00;
+    }
+
+    &.half {
+        position: relative;
+
+        &::before {
+            content: "★";
+            position: absolute;
+            color: #ffff00;
+            left: 0;
+            top: 0;  
+            clip-path: inset(0 50% 0 0); 
+        }
+    }
+}

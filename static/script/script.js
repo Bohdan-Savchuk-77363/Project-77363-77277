@@ -1,16 +1,11 @@
-const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.arrow-prev');
-const nextButton = document.querySelector('.arrow-next');
-let IndexCurrent = 0;
+import { initSlider } from "./slider.js";
+import { initBookSlider } from "./book-slider.js";
 
-prevButton.addEventListener('click', () => {
-    slides[IndexCurrent].classList.remove('active');
-    IndexCurrent = (IndexCurrent - 1 + slides.length) % slides.length;
-    slides[IndexCurrent].classList.add('active');
+document.addEventListener('DOMContentLoaded', () => {
+
+    //invoke a slider 
+    initSlider();
+    initBookSlider();
+
 });
 
-nextButton.addEventListener('click', () => {
-    slides[IndexCurrent].classList.remove('active');
-    IndexCurrent = (IndexCurrent + 1) % slides.length;
-    slides[IndexCurrent].classList.add('active');
-});
