@@ -5,16 +5,25 @@
     background-position: center;
 
     position: relative;
-    z-index: -10;
+    /* 1. Задаем z-index родителю, чтобы создать изолированный контекст наложения */
+    z-index: 1;
 
     &::before {
         content: '';
         position: absolute;
         inset: 0;
-        z-index: -5;
+        /* 2. Ставим -1. Теперь слой с размытием будет НАД фоновой картинкой, но ПОД контентом */
+        z-index: -1;
         backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(1px); 
+        /* 3. Опечатка: тут у вас был 1px. Сделал 12px, иначе в Safari размытия почти не будет видно */
+        -webkit-backdrop-filter: blur(12px);
     }
+}
+
+/* 4. Обязательно поднимаем контейнер с текстом и кнопкой! */
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {

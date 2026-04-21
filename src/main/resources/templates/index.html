@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vistula Books</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/style/style.css}">
+</head>
+<body>
+<header class="header">
+  
+  <a href="#" class="header-logo">
+    <img class="header-logo-img" th:src="@{/images/logo.svg}" alt="VistulaBook logo">
+    <span class="header-logo-text">Vistula Book</span>
+  </a>
+  
+  <nav class="nav">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Katalog</a>
+    <a href="#" class="nav-link">Books</a>
+    <a href="#" class="nav-link">Ebooks</a>
+    <a href="#" class="nav-link">Info</a>
+  </nav>
+  
+  <div class="icon-list">
+    <a href="#" class="icon-link">
+      <svg class="icon-img">
+        <use alt="search" th:href="@{/images/icon-sprite.svg#search}"></use>
+      </svg>
+    </a>
+    <a href="#" class="icon-link">
+      <svg class="icon-img">
+        <use alt="favourite" th:href="@{/images/icon-sprite.svg#favourite}"></use>
+      </svg>
+    </a>
+    <a href="#" class="icon-link">
+      <svg class="icon-img">
+        <use alt="cart" th:href="@{/images/icon-sprite.svg#shopping-cart}"></use>
+      </svg>
+    </a>
+    <a href="#" class="icon-link">
+      <svg class="icon-img">
+        <use alt="account" th:href="@{/images/icon-sprite.svg#account}"></use>
+      </svg>
+    </a>
+  </div>
+
+</header>
+
+<main>
+  
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Welcome to <br> Vistula Books</h1>
+      
+      <div class="hero-footer">
+        <a href="" class="btn btn--big">
+          <svg class="btn-icon">
+            <use alt="search" th:href="@{/images/icon-sprite.svg#search}"></use>
+          </svg>
+          Search book
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="section section--light">
+    <div class="container">
+      
+      <div class="slider">
+        
+        <div class="slide-list">
+          <div class="slide slide--red active">
+            <img th:src="@{/images/slider-book-1.jpg}" alt="slide image" class="slide-img">
+            <div class="slide-info">
+              <h2 class="slide-title">Slide Title</h2>
+              <p class="slide-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Ab ad hic sapiente et similique unde! Perferendis voluptas, aperiam ratione
+                libero nobis, in ullam illo, voluptatem unde fugit hic deleniti sequi?</p>
+              <a href="#" class="btn btn--orange">Check</a>
+            </div>
+          </div>
+          
+          <div class="slide slide--blue">
+            <img th:src="@{/images/slider-book-2.jpg}" alt="slide image" class="slide-img">
+            <div class="slide-info">
+              <h2 class="slide-title">Slide Title</h2>
+              <p class="slide-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Ab ad hic sapiente et similique unde! Perferendis voluptas, aperiam ratione
+                libero nobis, in ullam illo, voluptatem unde fugit hic deleniti sequi?</p>
+              <a href="#" class="btn btn--orange">Check</a>
+            </div>
+          </div>
+          
+          <div class="arrows">
+            <button href="#" class="arrow" id="slide-prev-arrow">
+              <svg class="arrow-icon">
+                <use alt="arrow-left" th:href="@{/images/icon-sprite.svg#arrow-left}"></use>
+              </svg>
+            </button>
+            <button href="#" class="arrow" id="slide-next-arrow">
+              <svg class="arrow-icon">
+                <use alt="arrow-right" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      
+      </div>
+      
+      <div class="recommendation">
+        
+        <div class="recommendation-item">
+          <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
+          
+          <div class="recommendation-info">
+            <h3 class="recommendation-title">Book Name</h3>
+            <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="recommendation-footer">
+              <a href="#" class="btn btn--orange btn--circle">
+                <svg class="btn-icon">
+                  <use alt="search" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="recommendation-item">
+          <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
+          
+          <div class="recommendation-info">
+            <h3 class="recommendation-title">Book Name</h3>
+            <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            
+            <div class="recommendation-footer">
+              <a href="#" class="btn btn--orange btn--circle">
+                <svg class="btn-icon">
+                  <use alt="search" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="recommendation-item">
+          <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
+          
+          <div class="recommendation-info">
+            <h3 class="recommendation-title">Book Name</h3>
+            <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            
+            <div class="recommendation-footer">
+              <a href="#" class="btn btn--orange btn--circle">
+                <svg class="btn-icon">
+                  <use alt="search" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    
+    </div>
+  </section>
+  
+  <section class="section section--dark">
+    <div class="container">
+      
+      <div class="book-list">
+        <h2 class="book-list-title">Book list title</h2>
+        
+        <div class="book-slider">
+          
+          <div class="arrows arrows--book">
+            <button href="#" class="arrow" id="book-prev">
+              <svg class="arrow-icon">
+                <use alt="arrow-left" th:href="@{/images/icon-sprite.svg#arrow-left}"></use>
+              </svg>
+            </button>
+            <button href="#" class="arrow" id="book-next">
+              <svg class="arrow-icon">
+                <use alt="arrow-right" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="book-slider-track-wrapper">
+            <div class="book-slider-track" id="track">
+              
+              <template>
+                
+                <div class="book-сard">
+                  <img src="https://placehold.co/175x250" alt="book.title" class="book-card-img">
+                  
+                  <div class="book-card-body">
+                    <h3 class="book-card-title">book title</h3>
+                    <p class="book-card-author">author</p>
+                    <div class="book-card-stars">
+                      ★★★★★
+                      <span class="book-card__rating-count">25.111</span>
+                    </div>
+                  </div>
+                </div>
+              
+              </template>
+            
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    
+    <div class="footer-block">
+      
+      <hr class="footer__divider">
+      
+      <div class="footer__bottom">
+        <span class="footer__bottom-info">© 2026 Bohdan Savchuk</span>
+        <span class="footer__bottom-role">Junior Frontend & Python Developer</span>
+      </div>
+      
+      <div class="footer__bottom">
+        <span class="footer__bottom-info">© 2026 Oleksabdr Paduch</span>
+        <span class="footer__bottom-role">Junior Frontend & Python Developer</span>
+      </div>
+    
+    </div>
+  
+  </div>
+</footer>
+
+<script type="module" th:src="@{/script/script.js}"></script>
+
+</body>
+</html>
