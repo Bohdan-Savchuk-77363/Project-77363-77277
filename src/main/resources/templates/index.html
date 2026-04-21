@@ -1,54 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vistula Books</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" th:href="@{/style/style.css}">
-</head>
-<body>
-<header class="header">
-  
-  <a href="#" class="header-logo">
-    <img class="header-logo-img" th:src="@{/images/logo.svg}" alt="VistulaBook logo">
-    <span class="header-logo-text">Vistula Book</span>
-  </a>
-  
-  <nav class="nav">
-    <a href="#" class="nav-link">Home</a>
-    <a href="#" class="nav-link">Katalog</a>
-    <a href="#" class="nav-link">Books</a>
-    <a href="#" class="nav-link">Ebooks</a>
-    <a href="#" class="nav-link">Info</a>
-  </nav>
-  
-  <div class="icon-list">
-    <a href="#" class="icon-link">
-      <svg class="icon-img">
-        <use alt="search" th:href="@{/images/icon-sprite.svg#search}"></use>
-      </svg>
-    </a>
-    <a href="#" class="icon-link">
-      <svg class="icon-img">
-        <use alt="favourite" th:href="@{/images/icon-sprite.svg#favourite}"></use>
-      </svg>
-    </a>
-    <a href="#" class="icon-link">
-      <svg class="icon-img">
-        <use alt="cart" th:href="@{/images/icon-sprite.svg#shopping-cart}"></use>
-      </svg>
-    </a>
-    <a href="#" class="icon-link">
-      <svg class="icon-img">
-        <use alt="account" th:href="@{/images/icon-sprite.svg#account}"></use>
-      </svg>
-    </a>
-  </div>
 
-</header>
+  <head th:replace="~{fragments/head :: head}"></head>
+
+<body>
+
+  <header th:replace="~{fragments/header :: header}"></header>
 
 <main>
   
@@ -57,7 +14,7 @@
       <h1 class="hero-title">Welcome to <br> Vistula Books</h1>
       
       <div class="hero-footer">
-        <a href="" class="btn btn--big">
+        <a th:href="@{/catalog}" class="btn btn--big">
           <svg class="btn-icon">
             <use alt="search" th:href="@{/images/icon-sprite.svg#search}"></use>
           </svg>
@@ -221,27 +178,7 @@
 
 </main>
 
-<footer class="footer">
-  <div class="container">
-    
-    <div class="footer-block">
-      
-      <hr class="footer__divider">
-      
-      <div class="footer__bottom">
-        <span class="footer__bottom-info">© 2026 Bohdan Savchuk</span>
-        <span class="footer__bottom-role">Junior Frontend & Python Developer</span>
-      </div>
-      
-      <div class="footer__bottom">
-        <span class="footer__bottom-info">© 2026 Oleksabdr Paduch</span>
-        <span class="footer__bottom-role">Junior Frontend & Python Developer</span>
-      </div>
-    
-    </div>
-  
-  </div>
-</footer>
+  <footer th:replace="~{fragments/footer :: footer}"></footer>
 
 <script type="module" th:src="@{/script/script.js}"></script>
 

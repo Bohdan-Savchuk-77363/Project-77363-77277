@@ -1,13 +1,13 @@
-package com.web.project7736377277;
+package com.web.book;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Project7736377277Application {
+public class BookApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Project7736377277Application.class, args);
+        SpringApplication.run(BookApplication.class, args);
     }
 
 }
