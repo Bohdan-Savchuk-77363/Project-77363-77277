@@ -1,0 +1,52 @@
+@import "header.css";
+@import "nav.css";
+@import "icon-list.css";
+@import "slider.css";
+@import "hero.css";
+@import "btn.css";
+
+:root {
+    --gray-color: #bebebe;
+    --primary: #2C3038;
+    --dark-gray: #23262D;
+    --light-gray: #F0F0F0;
+    --light: #FFFFFF;
+    --gray-text: #888E95;
+    --orange: #FF7300
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+
+    background-color: var(--light-gray);
+}
+
+.container {
+    width: 100%;
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}

@@ -9,6 +9,7 @@
 @import "book-list.css";
 @import "arrow.css";
 @import "footer.css";
+@import "account.css";
 
 :root {
     --gray-color: #bebebe;
