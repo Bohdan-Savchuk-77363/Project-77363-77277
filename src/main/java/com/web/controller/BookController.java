@@ -40,4 +40,13 @@ public class BookController {
     public String account() {
         return "account"; 
     }
+    @GetMapping("/login")
+    public String loginPage() {
+        return "public/authorization/login-page"; // без .html — Thymeleaf сам найдёт
+    }
+
+    @GetMapping("/registration")
+    public String registrationPage() {
+        return "public/authorization/registration-page";
+    }
 }
