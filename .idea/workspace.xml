@@ -34,6 +34,7 @@
     &quot;accountId&quot;: &quot;ea0b0022-e543-4a17-a6a6-34730911fd30&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
