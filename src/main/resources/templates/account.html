@@ -10,8 +10,7 @@
         <section class="section">
             <div class="container">
 
-                <div class="account__header">
-                    <h2 class="user-name">Name Surname</h2>
+                <div class="user-account__header">
                     <div class="icon-list">
                         <a th:href="@{/favourite}" class="icon-link">
                         <svg class="icon-img">
@@ -19,9 +18,10 @@
                         </svg>
                         </a>
                     </div>
+                    <h2 class="user-name">Name Surname</h2>
                 </div>
 
-                <div class="account__data">
+                <div class="user-account__data">
                     <img th:src="@{/images/user-logo.png}" alt="Your logo" class="user-logo">
 
                     <div class="user-books"></div>
