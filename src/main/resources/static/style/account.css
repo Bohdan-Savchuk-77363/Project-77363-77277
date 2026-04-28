@@ -1,0 +1,23 @@
+.account__header {
+    display: flex;
+    padding: 10rem 0;
+    background-color: var(--gray-color);
+}
+
+.account__data {
+    padding: 20rem 0;
+    background-color: var(--light-gray);
+
+    position: relative;
+}
+
+.user-logo {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 3px #000 solid;
+
+    position: absolute;
+}
+
