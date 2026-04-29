@@ -9,24 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78a39972-bdf5-4db1-8e9b-c16a9cdd00df" name="Changes" comment="backend and database">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style/account.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/style/account.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/icon-sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/icon-sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/script/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style/btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/btn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style/hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/hero.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style/icon-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/icon-list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="78a39972-bdf5-4db1-8e9b-c16a9cdd00df" name="Changes" comment="backend and database" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +82,7 @@
     "Spring Boot.BookApplication.executor": "Run",
     "Tomcat Server.Tomcat 9.0.117.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "dev-77363",
+    "git-widget-placeholder": "Merging dev-77363",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/My note/Hoty/uni/Semestr_2/technologii internetowi/projekt",
     "node.js.selected.package.tslint": "(autodetect)",
