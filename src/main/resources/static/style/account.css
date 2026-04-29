@@ -4,15 +4,10 @@
 
     padding: 5rem 0;
     background-color: var(--gray-color);
+}
 
-    &.icon-list {
-        justify-content: flex-end;
-
-    }
-
-    &.user-name {
-        text-align: center;
-    }
+user-name {
+    text-align: center;
 }
 
 .user-account__data {
@@ -30,5 +25,8 @@
     border: 3px #000 solid;
 
     position: absolute;
+    left: 2rem;
+    top: -50%;
+    transform: translateY(50%);
 }
 

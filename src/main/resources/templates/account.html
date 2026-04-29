@@ -11,20 +11,24 @@
             <div class="container">
 
                 <div class="user-account__header">
-                    <div class="icon-list">
-                        <a th:href="@{/favourite}" class="icon-link">
-                        <svg class="icon-img">
-                            <use th:href="@{/images/icon-sprite.svg#favourite}"></use>
-                        </svg>
-                        </a>
-                    </div>
                     <h2 class="user-name">Name Surname</h2>
                 </div>
 
                 <div class="user-account__data">
                     <img th:src="@{/images/user-logo.png}" alt="Your logo" class="user-logo">
 
-                    <div class="user-books"></div>
+                    <div class="book-сard">
+                        <img src="https://placehold.co/175x250" alt="book.title" class="book-card-img">
+
+                        <div class="book-card-body">
+                            <h3 class="book-card-title">book title</h3>
+                            <p class="book-card-author">author</p>
+                            <div class="book-card-stars">
+                                ★★★★★
+                                <span class="book-card__rating-count">25.111</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
             </div>

@@ -1,5 +1,13 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 
-{% block content %}
-<p>hello world</p>
-{% endblock %}
+<head th:replace="~{fragments/head :: head}"></head>
+
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<main style="height: 100vh;"></main>
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>

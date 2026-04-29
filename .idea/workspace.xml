@@ -10,170 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78a39972-bdf5-4db1-8e9b-c16a9cdd00df" name="Changes" comment="backend and database">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/web/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/web/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/web/controller/PageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/web/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/web/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/web/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style/authorization/authorization-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/public/authorization/login-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/public/authorization/registration-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/BookApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/config/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/controller/BookController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/controller/PageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/repository/BookRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/repository/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/service/BookService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/com/web/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/images/hero.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/images/icon-sprite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/images/slider-book-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/images/slider-book-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/script/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/style/authorization/authorization-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/style/btn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/style/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/style/hero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/style/icon-list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/style/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/style/slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/static/style/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/templates/public/authorization/login-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/templates/public/authorization/registration-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/templates/public/error/error-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/classes/templates/public/home-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/HikariCP-4.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/antlr-2.7.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/aspectjweaver-1.9.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/attoparser-2.0.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/byte-buddy-1.11.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/checker-qual-3.5.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/classmate-1.5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/hibernate-commons-annotations-5.1.2.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/hibernate-core-5.6.15.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/istack-commons-runtime-3.0.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jackson-annotations-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jackson-core-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jackson-databind-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jackson-datatype-jdk8-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jackson-datatype-jsr310-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jackson-module-parameter-names-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jakarta.activation-1.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jakarta.annotation-api-1.3.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jakarta.persistence-api-2.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jakarta.transaction-api-1.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jakarta.xml.bind-api-2.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jandex-2.4.2.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jaxb-runtime-2.3.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jboss-logging-3.4.3.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/jul-to-slf4j-1.7.36.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/log4j-api-2.17.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/log4j-to-slf4j-2.17.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/logback-classic-1.2.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/logback-core-1.2.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/postgresql-42.3.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/slf4j-api-1.7.36.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/snakeyaml-1.29.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-aop-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-aspects-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-beans-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-autoconfigure-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-aop-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-data-jpa-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-jdbc-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-json-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-logging-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-security-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-thymeleaf-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-tomcat-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-boot-starter-web-2.6.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-context-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-core-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-data-commons-2.6.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-data-jpa-2.6.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-expression-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-jcl-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-jdbc-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-orm-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-security-config-5.6.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-security-core-5.6.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-security-crypto-5.6.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-security-web-5.6.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-tx-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-web-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/spring-webmvc-5.3.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/thymeleaf-3.0.15.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/thymeleaf-extras-java8time-3.0.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/thymeleaf-spring5-3.0.15.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/tomcat-embed-core-9.0.75.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/tomcat-embed-el-9.0.75.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/tomcat-embed-websocket-9.0.75.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/txw2-2.3.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Project-77277-77363-0.0.1/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/BookApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/config/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/controller/AuthController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/controller/BookController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/controller/PageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/repository/BookRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/repository/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/service/BookService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/web/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/hero.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icon-sprite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/slider-book-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/slider-book-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/script/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/style/authorization/authorization-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/style/btn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/style/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/style/hero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/style/icon-list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/style/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/style/slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/style/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/public/authorization/login-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/public/authorization/registration-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/public/error/error-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/public/home-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/web/book/BookApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/web/BookApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/web/book/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/web/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/web/book/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/web/repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/web/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/web/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/style/account.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/style/account.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style/hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/style/hero.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/icon-sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/icon-sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/script/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style/btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/btn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style/hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/hero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style/icon-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/icon-list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,12 +93,17 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.BookApplication.executor": "Run",
     "Tomcat Server.Tomcat 9.0.117.executor": "Run",
-    "git-widget-placeholder": "Merging dev-77363",
-    "last_opened_file_path": "C:/Users/Lenovo/Downloads/reservation-sistem (2)/Project-77363-77277/static/style",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "dev-77363",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/My note/Hoty/uni/Semestr_2/technologii internetowi/projekt",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.32988507",
@@ -279,7 +136,7 @@
   </component>
   <component name="RunManager" selected="Spring Boot.BookApplication">
     <configuration name="BookApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="ProjectLibreli" />
+      <module name="Project-77363-77277" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.web.BookApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -402,6 +259,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="backend and database" />
