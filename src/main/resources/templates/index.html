@@ -8,11 +8,11 @@
   <header th:replace="~{fragments/header :: header}"></header>
 
 <main>
-  
+
   <section class="hero">
     <div class="container">
       <h1 class="hero-title">Welcome to <br> Vistula Books</h1>
-      
+
       <div class="hero-footer">
         <a th:href="@{/catalog}" class="btn btn--big">
           <svg class="btn-icon">
@@ -23,13 +23,13 @@
       </div>
     </div>
   </section>
-  
-  
+
+
   <section class="section section--light">
     <div class="container">
-      
+
       <div class="slider">
-        
+
         <div class="slide-list">
           <div class="slide slide--red active">
             <img th:src="@{/images/slider-book-1.jpg}" alt="slide image" class="slide-img">
@@ -41,7 +41,7 @@
               <a href="#" class="btn btn--orange">Check</a>
             </div>
           </div>
-          
+
           <div class="slide slide--blue">
             <img th:src="@{/images/slider-book-2.jpg}" alt="slide image" class="slide-img">
             <div class="slide-info">
@@ -52,28 +52,18 @@
               <a href="#" class="btn btn--orange">Check</a>
             </div>
           </div>
-          
-          <div class="arrows">
-            <button href="#" class="arrow" id="slide-prev-arrow">
-              <svg class="arrow-icon">
-                <use alt="arrow-left" th:href="@{/images/icon-sprite.svg#arrow-left}"></use>
-              </svg>
-            </button>
-            <button href="#" class="arrow" id="slide-next-arrow">
-              <svg class="arrow-icon">
-                <use alt="arrow-right" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
-              </svg>
-            </button>
-          </div>
+
+          <div th:replace="~{fragments/slider/slider-arrow :: arrows('slide-prev-arrow', 'slide-next-arrow', '')}"></div>
+
         </div>
-      
+
       </div>
-      
+
       <div class="recommendation">
-        
+
         <div class="recommendation-item">
           <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
-          
+
           <div class="recommendation-info">
             <h3 class="recommendation-title">Book Name</h3>
             <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
@@ -86,14 +76,14 @@
             </div>
           </div>
         </div>
-        
+
         <div class="recommendation-item">
           <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
-          
+
           <div class="recommendation-info">
             <h3 class="recommendation-title">Book Name</h3>
             <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            
+
             <div class="recommendation-footer">
               <a href="#" class="btn btn--orange btn--circle">
                 <svg class="btn-icon">
@@ -103,14 +93,14 @@
             </div>
           </div>
         </div>
-        
+
         <div class="recommendation-item">
           <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
-          
+
           <div class="recommendation-info">
             <h3 class="recommendation-title">Book Name</h3>
             <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            
+
             <div class="recommendation-footer">
               <a href="#" class="btn btn--orange btn--circle">
                 <svg class="btn-icon">
@@ -120,41 +110,30 @@
             </div>
           </div>
         </div>
-      
+
       </div>
-    
+
     </div>
   </section>
-  
+
   <section class="section section--dark">
     <div class="container">
-      
+
       <div class="book-list">
         <h2 class="book-list-title">Book list title</h2>
-        
+
         <div class="book-slider">
-          
-          <div class="arrows arrows--book">
-            <button href="#" class="arrow" id="book-prev">
-              <svg class="arrow-icon">
-                <use alt="arrow-left" th:href="@{/images/icon-sprite.svg#arrow-left}"></use>
-              </svg>
-            </button>
-            <button href="#" class="arrow" id="book-next">
-              <svg class="arrow-icon">
-                <use alt="arrow-right" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
-              </svg>
-            </button>
-          </div>
-          
+
+          <div th:replace="~{fragments/slider/slider-arrow :: arrows('book-prev', 'book-next', 'arrows--book')}"></div>
+
           <div class="book-slider-track-wrapper">
             <div class="book-slider-track" id="track">
-              
+
               <template>
-                
+
                 <div class="book-сard">
                   <img src="https://placehold.co/175x250" alt="book.title" class="book-card-img">
-                  
+
                   <div class="book-card-body">
                     <h3 class="book-card-title">book title</h3>
                     <p class="book-card-author">author</p>
@@ -164,15 +143,15 @@
                     </div>
                   </div>
                 </div>
-              
+
               </template>
-            
+
             </div>
           </div>
-        
+
         </div>
       </div>
-    
+
     </div>
   </section>
 

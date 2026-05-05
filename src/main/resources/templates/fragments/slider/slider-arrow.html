@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+    <div th:fragment="arrows(prevId, nextId, extraClass)" class="arrows" th:classappend="${extraClass}">
+        <button class="arrow" th:id="${prevId}">
+            <svg class="arrow-icon">
+                <use th:href="@{/images/icon-sprite.svg#arrow-left}"></use>
+            </svg>
+        </button>
+        <button class="arrow" th:id="${nextId}">
+            <svg class="arrow-icon">
+                <use th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
+            </svg>
+        </button>
+    </div>
+</html>
