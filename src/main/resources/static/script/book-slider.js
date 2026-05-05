@@ -26,16 +26,16 @@ let currentPage = 0;
 
 //Result function
 export function initBookSlider() {
-    books.forEach(book => {
-        track.appendChild(createCard(book));
-    });
+   books.forEach(book => {
+      track.appendChild(createCard(book));
+   });
 
     prevBtn.addEventListener('click', () => goTo(currentPage - 1));
     nextBtn.addEventListener('click', () => goTo(currentPage + 1));
     prevBtn.disabled = true;
 }
 
-//Function for generate correct count of start depend on rate
+
 
 function renderStars(rating) {
     let stars = '';
@@ -51,8 +51,6 @@ function renderStars(rating) {
     return stars;
 }
 
-
-//Create a card with book information
 
 function createCard(book) {
     const card = document.createElement("div");

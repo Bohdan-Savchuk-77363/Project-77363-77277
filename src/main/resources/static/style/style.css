@@ -10,6 +10,8 @@
 @import "arrow.css";
 @import "footer.css";
 @import "account.css";
+@import "temp.css";
+@import "about.css";
 
 :root {
     --gray-color: #bebebe;

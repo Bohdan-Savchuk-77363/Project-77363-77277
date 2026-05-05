@@ -1,0 +1,86 @@
+/* ── TEAM ── */
+.team {
+    padding: 15rem 0 10rem;
+    background-color: var(--light-gray);
+}
+
+.team__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team__desc { max-width: 55%; }
+
+.team__title {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.team__text {
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
+
+.team__logo {
+    display: block;
+    max-width: 40%;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+/* ── MEMBER ── */
+.member {
+    padding: 10rem 0;
+}
+
+.member:nth-child(odd) {
+    background-color: var(--light-gray);
+}
+
+.member__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+}
+
+.member--reverse .member__info {
+    flex-direction: row-reverse;
+}
+
+.member__img {
+    display: block;
+    width: 30rem;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.member__desc {
+    max-width: 50%;
+    text-align: right;
+}
+
+.member--reverse .member__desc {
+    text-align: left;
+}
+
+.member__title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.member__index {
+    display: block;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--gray-text);
+    font-size: 1.6rem;
+}
+
+.member__text {
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
