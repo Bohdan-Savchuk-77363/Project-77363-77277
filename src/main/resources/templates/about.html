@@ -8,7 +8,66 @@
 
 <main>
 
-    <section class=""></section>
+    <section class="team">
+        <div class="container">
+            <div class="team__info">
+                <div class="team__desc">
+                    <h1 class="team__title">About us</h1>
+                    <p class="team__text">
+                        Welcome to our digital reading sanctuary.
+                        Our application is designed for book lovers who value
+                        simplicity and accessibility. We've built a streamlined
+                        platform that allows you to manage your library and enjoy
+                        your favorite books seamlessly across devices. Whether you're
+                        diving into a classic or exploring new releases, our reader
+                        provides a clean, distraction-free environment tailored for
+                        the modern bibliophile.
+                    </p>
+                </div>
+                <img th:src="@{/images/team-logo.png}" alt="Hot Fisher logo" class="team__logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="member">
+        <div class="container">
+            <div class="member__info">
+                <img th:src="@{/images/hoty-photo.jpg}" alt="Bohdan Savchuk" class="member__img">
+                <div class="member__desc">
+                    <h2 class="member__title">Bohdan Savchuk</h2>
+                    <span class="member__index">77363</span>
+                    <p class="member__text">
+                        I'm a Full-Stack Developer who loves turning complex ideas into simple,
+                        working websites. I handle everything from the "brain" of the app using
+                        Java to the parts you see and click on using HTML, CSS, and JavaScript.
+                        My goal is to make sure that every project I touch is not only fast and
+                        reliable but also easy and fun for you to use. I'm always learning new
+                        things to build better digital experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="member member--reverse">
+        <div class="container">
+            <div class="member__info">
+                <div class="member__desc">
+                    <h2 class="member__title">Oleksandr Paduch</h2>
+                    <span class="member__index">77277</span>
+                    <p class="member__text">
+                        Every great project needs a great team, and I'm lucky to work with a
+                        talented developer who shares my passion for code. Oleksandr is a Full-Stack
+                        pro who's an expert at making the backend and frontend work together perfectly.
+                        Whether it's writing solid Java code or styling a page with HTML/CSS, he focuses
+                        on the details that make a website feel polished. Together, we turn "what if"
+                        into "here it is."
+                    </p>
+                </div>
+                <img th:src="@{/images/team-logo.png}" alt="Oleksandr Paduch" class="member__img">
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer th:replace="~{fragments/footer :: footer}"></footer>
