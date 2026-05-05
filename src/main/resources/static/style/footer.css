@@ -1,6 +1,7 @@
 .footer {
     padding: 10rem 0 5rem;
-    background-color: var(--gray-color);
+    background-color: var(--dark-gray);
+    color: var(--light);
 }
 
 .footer-block {

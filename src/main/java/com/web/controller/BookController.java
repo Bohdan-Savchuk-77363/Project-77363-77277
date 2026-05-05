@@ -16,33 +16,19 @@ public class BookController {
         return "about"; 
     }
 
-    @GetMapping("/books") 
-    public String books() {
-        return "books"; 
-    }
-
-    @GetMapping("/ebooks") 
-    public String ebooks() {
-        return "ebooks"; 
-    }
-
     @GetMapping("/catalog") 
     public String catalog() {
         return "catalog"; 
-    }
-
-    @GetMapping("/favourite") 
-    public String favourite() {
-        return "favourite"; 
     }
 
     @GetMapping("/account") 
     public String account() {
         return "account"; 
     }
+
     @GetMapping("/login")
     public String loginPage() {
-        return "public/authorization/login-page"; // без .html — Thymeleaf сам найдёт
+        return "public/authorization/login-page";
     }
 
     @GetMapping("/registration")
