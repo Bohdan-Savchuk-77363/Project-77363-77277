@@ -1,38 +1,23 @@
 package com.web.controller;
 
+import com.web.service.BookService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller 
 public class BookController {
+    private final BookService bookService;
 
-    @GetMapping("/") 
-    public String index() {
+    public BookController(BookService bookService) {
+        this.bookService = bookService;
+    }
+
+    @GetMapping("/")
+    public String bookData(Model model) {
+        System.out.println("Count of page: " + bookService.getAllBook().size());
+        model.addAttribute("books", bookService.getAllBook());
+
         return "index";
-    }
-
-    @GetMapping("/about") 
-    public String about() {
-        return "about"; 
-    }
-
-    @GetMapping("/catalog") 
-    public String catalog() {
-        return "catalog"; 
-    }
-
-    @GetMapping("/account") 
-    public String account() {
-        return "account"; 
-    }
-
-    @GetMapping("/login")
-    public String loginPage() {
-        return "public/authorization/login-page";
-    }
-
-    @GetMapping("/registration")
-    public String registrationPage() {
-        return "public/authorization/registration-page";
     }
 }
