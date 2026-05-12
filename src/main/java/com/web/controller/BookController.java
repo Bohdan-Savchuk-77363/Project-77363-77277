@@ -42,7 +42,7 @@ public class BookController {
     }
     @GetMapping("/login")
     public String loginPage() {
-        return "public/authorization/login-page"; // без .html — Thymeleaf сам найдёт
+        return "public/authorization/login-page";
     }
 
     @GetMapping("/registration")
