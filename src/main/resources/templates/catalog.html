@@ -6,7 +6,25 @@
 <body>
     <header th:replace="~{fragments/header :: header}"></header>
 
-    <main style="height: 100vh;"></main>
+    <main>
+        <section class="popular-book">
+            <h2 class="popular-book__title">Book list title</h2>
+
+            <div class="arrows arrows--book">
+                <button class="arrow" id="book-prev">
+                    <svg class="arrow-icon">
+                        <use th:href="@{/images/icon-sprite.svg#arrow-left}"></use>
+                    </svg>
+                </button>
+                <button class="arrow" id="book-next">
+                    <svg class="arrow-icon">
+                        <use th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
+                    </svg>
+                </button>
+            </div>
+
+        </section>
+    </main>
 
     <footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
