@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
     <head th:replace="~{fragments/head :: head}"></head>
 
@@ -16,7 +17,7 @@
                     <div class="user-bio__header">
                         <img th:src="@{/images/user-logo.png}" alt="Your logo" class="user-logo">
 
-                        <h2 class="user-name">Nickname</h2>
+                        <h2 class="user-name"><span sec:authentication="name">user</span></h2>
                     </div>
 
                     <dl class="user-bio__data">
