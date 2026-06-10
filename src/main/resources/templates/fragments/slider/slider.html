@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <div th:fragment="slider(prevId, nextId, extraClass, books)" class="book-slider">
+        <div th:replace="~{fragments/slider/slider-arrow :: arrows(${prevId}, ${nextId}, ${extraClass})}"></div>
+
+        <div class="book-slider-track-wrapper">
+            <div class="book-slider-track" id="track">
+                <div th:each="book : ${books}" th:replace="~{fragments/book-card :: book-card(book=${book})}"></div>
+            </div>
+        </div>
+    </div>
+</html>
