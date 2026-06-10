@@ -6,13 +6,16 @@ public class Book {
     private Double rating;
     private Integer reviews;
     private String img;
+    private String description;
 
-    public Book(String title, String author, Double rating, Integer reviews, String img) {
+
+    public Book(String title, String author, Double rating, Integer reviews, String img, String description) {
         this.title = title;
         this.author = author;
         this.rating = rating;
         this.reviews = reviews;
         this.img = img;
+        this.description = description;
     }
 
     public String getTitle() {
@@ -54,4 +57,5 @@ public class Book {
     public void setImg(String img) {
         this.img = img;
     }
+    public String getDescription(String description){ return this.description = description;}
 }

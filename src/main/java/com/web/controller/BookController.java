@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller 
 public class BookController {
-    private final BookService bookService;
 
     public BookController(BookService bookService) {
         this.bookService = bookService;
@@ -15,8 +14,7 @@ public class BookController {
 
     @GetMapping("/")
     public String bookData(Model model) {
-        System.out.println("Count of page: " + bookService.getAllBook().size());
-        model.addAttribute("books", bookService.getAllBook());
+        model.addAttribute("books", BookSe.getA)
 
         return "index";
     }
