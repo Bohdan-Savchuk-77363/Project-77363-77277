@@ -35,17 +35,20 @@ public class GoogleBooksService {
     }
 
     public List<Book> fetchBooks(String query, int maxResults) {
-        String url = UriComponentsBuilder.fromHttpUrl(apiUrl)
-                .queryParam("q", query)
-                .queryParam("maxResults", maxResults)
-                .queryParam("key", apiKey)
-                .toUriString();
+//        String url = UriComponentsBuilder.fromHttpUrl(apiUrl)
+//                .queryParam("q", query)
+//                .queryParam("maxResults", maxResults)
+//                .queryParam("key", apiKey)
+//                .toUriString();
+
+        String url = String.format("%s?q=%s&maxResults=%s&key=%s", apiUrl, query, maxResults, apiKey);
         List<Book> books = new ArrayList<>();
 
         try {
             String response = restTemplate.getForObject(url, String.class);
             JsonNode root = objectMapper.readTree(response);
             JsonNode items = root.path("items");
+
             if (items.isMissingNode() || !items.isArray()) return books;
             for (JsonNode item : items) {
                 JsonNode volumeInfo = item.path("volumeInfo");
@@ -54,6 +57,7 @@ public class GoogleBooksService {
                 List<String> authors = new ArrayList<>();
                 volumeInfo.path("authors").forEach(a -> authors.add(a.asText()));
                 String author = authors.isEmpty() ? "Unknown Author" : String.join(", ", authors);
+                
                 double rating = volumeInfo.path("averageRating").asDouble(0.0);
                 int reviews = volumeInfo.path("ratingsCount").asInt(0);
 

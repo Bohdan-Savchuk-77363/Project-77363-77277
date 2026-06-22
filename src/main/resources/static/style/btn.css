@@ -17,7 +17,21 @@
 .btn--big {
     font-size: 2.8rem;
 }
+.btn--login{
+    display: inline-flex;
+    align-items: center;
 
+    background-color: var(--light);
+    color: var(--primary);
+    stroke: var(--primary);
+
+    font-size: 2rem;
+    font-weight: 600;
+    width: 170px;
+    margin-top: 20px;
+
+    border-radius: 5px;
+}
 .btn--orange {
     background-color: var(--orange);
     color: var(--light);

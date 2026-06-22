@@ -7,12 +7,12 @@
 </head>
 <body>
 <div th:replace="~{fragments/form-layout :: formLayout(
-         title='Login account',
-         action='/auth/login',
-         fields=${logFields},
-         buttonText='Login in account',
-         footerLink='/registration',
-         footerText='Haven\'t an account?'
+         title='Form information about you',
+         action='/auth/update',
+         fields=${infoFields},
+         buttonText='Come back to account',
+         footerLink='/account',
+         footerText='return to account'
      )}"></div>
 </body>
 </html>
