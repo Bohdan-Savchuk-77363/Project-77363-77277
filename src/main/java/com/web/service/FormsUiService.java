@@ -8,7 +8,7 @@ import java.util.List;
 
 
 @Service
-public class FormUiService {
+public class FormsUiService {
     public static List<FormField> getRegistrationFields(){
         return List.of(
                 new FormField("name","Name", true, "text"),

@@ -1,9 +1,8 @@
 package com.web.controller;
 
-import com.web.dto.FormField;
 import com.web.entity.User;
 import com.web.entity.UserProfile;
-import com.web.service.FormUiService;
+import com.web.service.FormsUiService;
 import com.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -11,7 +10,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -36,7 +34,7 @@ public class AuthController {
 
         } catch (IllegalArgumentException e) {
             model.addAttribute("error", e.getMessage());
-            model.addAttribute("regFields", FormUiService.getRegistrationFields());
+            model.addAttribute("regFields", FormsUiService.getRegistrationFields());
             return "public/authorization/registration-page"; // назад с ошибкой
         }
     }
@@ -57,7 +55,7 @@ public class AuthController {
             return "redirect:/account";
         } catch (IllegalArgumentException e) {
             model.addAttribute("error", e.getMessage());
-            model.addAttribute("logFields", FormUiService.getLoginFields());
+            model.addAttribute("logFields", FormsUiService.getLoginFields());
             return "public/authorization/login-page";
         }
     }
@@ -69,7 +67,10 @@ public class AuthController {
             userProfile.setAge(age);
             userProfile.setCountry(country);
             userProfile.setPhotoUrl(photoUrl);
+
+            return "redirect: /account";
         } catch (IllegalArgumentException e) {
+
         }
 
     return"hello";

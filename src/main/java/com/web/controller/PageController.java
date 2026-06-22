@@ -1,6 +1,6 @@
 package com.web.controller;
 
-import com.web.service.FormUiService;
+import com.web.service.FormsUiService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,17 +27,19 @@ public class PageController {
 
     @GetMapping("/login")
     public String loginPage(Model model) {
-        model.addAttribute("logFields", FormUiService.getLoginFields());
+        model.addAttribute("logFields", FormsUiService.getLoginFields());
         return "public/authorization/login-page";
     }
     @GetMapping("/user-information")
-    public String informationPage(){
+
+    public String informationPage(Model model){
+        model.addAttribute("infoFields", FormsUiService.getProfileFields());
         return "public/authorization/user-information";
     }
 
     @GetMapping("/registration")
     public String registrationPage(Model model) {
-        model.addAttribute("regFields", FormUiService.getRegistrationFields());
+        model.addAttribute("regFields", FormsUiService.getRegistrationFields());
         return "public/authorization/registration-page";
     }
 }
