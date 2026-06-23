@@ -90,7 +90,7 @@ public class AuthController {
             userProfile.setAge(age);
             userProfile.setCountry(country);
             userProfile.setPhotoUrl(photoUrl);
-
+ 
 
             userProfileRepository.save(userProfile);
             return "redirect:/account";
