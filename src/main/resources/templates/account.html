@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-
     <head th:replace="~{fragments/head :: head}"></head>
-
 <body>
     <header th:replace="~{fragments/header :: header}"></header>
 
@@ -15,9 +13,17 @@
                 <div class="user-account-bio">
 
                     <div class="user-bio__header">
-                        <img th:src="@{/images/user-logo.png}" alt="Your logo" class="user-logo">
+                      <img th:if="${profile != null and profile.photoUrl != null}"
+                           th:src="${profile.photoUrl}"
+                           alt="Your logo" class="user-logo">
+                      
+                      <img th:unless="${profile != null and profile.photoUrl != null}"
+                           th:src="@{/images/user-logo.png}"
+                           alt="Default logo" class="user-logo">
 
-                        <h2 class="user-name"><span sec:authentication="name">user</span></h2>
+                      <h2 class="user-name"><span  th:text="${userName}">user</span></h2>
+                       <a th:href="@{/login}" class="btn--login">Login or register</a>
+                       <a th:href="@{/user-information}" class="btn--login">Fill information about yourself</a>
                     </div>
 
                     <dl class="user-bio__data">
@@ -28,7 +34,7 @@
                                 </svg>
                                 From
                             </dt>
-                            <dd class="bio__data-info">Poland</dd>
+                            <dd class="bio__data-info" th:text="${profile?.country}">Unset</dd>
                         </div>
 
                         <div class="bio__data-item">
@@ -38,7 +44,7 @@
                                 </svg>
                                 Age
                             </dt>
-                            <dd class="bio__data-info">18</dd>
+                            <dd class="bio__data-info" th:text="${profile?.age}">Unset</dd>
                         </div>
                     </dl>
 

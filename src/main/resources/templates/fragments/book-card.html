@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <div th:fragment="book-card(book)" class="book-card">
-        <img th:src="${book.img}" th:alt="${book.title}" class="book-card-img">
+<div th:fragment="book-card(book)" class="book-card">
+  <img th:src="${book.img}" th:alt="${book.title}" class="book-card-img">
 
-        <div class="book-card-body">
-            <h3 class="book-card-title" th:text="${book.title}">book title</h3>
-            <p class="book-card-author" th:text="${book.author}">author</p>
-            <div class="book-card-stars">
-                ★★★★★
-                <span class="book-card__rating-count" th:text="${book.reviews}">25.111</span>
-            </div>
-        </div>
+  <div class="book-card-body">
+    <h3 class="book-card-title" th:text="${book.title}">book title</h3>
+    <p class="book-card-author" th:text="${book.author}">author</p>
+    <div class="book-card-stars">
+      ★★★★★
+      <span class="book-card__rating-count"
+            th:text="${book.reviews > 0 ? book.reviews : 'No ratings'}">25.111</span>
     </div>
+    <p class="book-card-description"
+       th:if="${book.description != null and !book.description.isEmpty()}"
+       th:text="${#strings.abbreviate(book.description, 100)}">description</p>
+  </div>
+</div>
 </html>

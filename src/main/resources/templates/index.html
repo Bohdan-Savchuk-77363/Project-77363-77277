@@ -59,55 +59,25 @@
 
       </div>
 
-      <div class="recommendation">
-
-        <div class="recommendation-item">
-          <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
-
-          <div class="recommendation-info">
-            <h3 class="recommendation-title">Book Name</h3>
-            <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            <div class="recommendation-footer">
-              <a href="#" class="btn btn--orange btn--circle">
-                <svg class="btn-icon">
-                  <use alt="search" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
-                </svg>
-              </a>
+      
+        
+        <div class="recommendation">
+          <div class="recommendation-item" th:each="book, stat : ${books}" th:if="${stat.index < 3}">
+            <img th:src="${book.img}" th:alt="${book.title}" class="recommendation-img">
+            <div class="recommendation-info">
+              <h3 class="recommendation-title" th:text="${book.title}">Book Name</h3>
+              <div class="recommendation-footer">
+                <a th:href="@{'/book/' + ${book.googleBooksId}}" class="btn btn--orange btn--circle">
+                  <svg class="btn-icon">
+                    <use alt="search" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="recommendation-item">
-          <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
-
-          <div class="recommendation-info">
-            <h3 class="recommendation-title">Book Name</h3>
-            <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-
-            <div class="recommendation-footer">
-              <a href="#" class="btn btn--orange btn--circle">
-                <svg class="btn-icon">
-                  <use alt="search" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="recommendation-item">
-          <img src="https://placehold.co/175x250" alt="" class="recommendation-img">
-
-          <div class="recommendation-info">
-            <h3 class="recommendation-title">Book Name</h3>
-            <p class="recommendation-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-
-            <div class="recommendation-footer">
-              <a href="#" class="btn btn--orange btn--circle">
-                <svg class="btn-icon">
-                  <use alt="search" th:href="@{/images/icon-sprite.svg#arrow-right}"></use>
-                </svg>
-              </a>
-            </div>
+        
+     
           </div>
         </div>
 
@@ -115,30 +85,26 @@
 
     </div>
   </section>
-
+  
   <section class="section section--dark">
     <div class="container">
-
       <div class="book-list">
-        <h2 class="book-list-title">Book list title</h2>
-
+        <h2 class="book-list-title" th:text="${query != null} ? 'Results for: ' + ${query} : 'Recommended Books'">Book list title</h2>
+        
         <div class="book-slider">
-
           <div th:replace="~{fragments/slider/slider-arrow :: arrows('book-prev', 'book-next', 'arrows--book')}"></div>
-
+          
           <div class="book-slider-track-wrapper">
             <div class="book-slider-track" id="track">
-
-<!--              <div th:each="book : ${books}" class="swiper-slide">-->
-<!--                <div th:replace="~{fragments/book-card :: book-card(book=${book}})}"></div>-->
-<!--              </div>-->
-
+              
+              <div th:each="book : ${books}" class="swiper-slide">
+                <div th:replace="~{fragments/book-card :: book-card(book=${book})}"></div>
+              </div>
+            
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   </section>
 

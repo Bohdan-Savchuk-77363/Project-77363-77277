@@ -2,17 +2,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Create account</title>
+  <title>inform</title>
   <link href="/style/authorization/authorization-page.css" rel="stylesheet">
 </head>
 <body>
 <div th:replace="~{fragments/form-layout :: formLayout(
-         title='Create account',
-         action='/auth/register',
-         fields=${regFields},
-         buttonText='Create account',
-         footerLink='/login',
-         footerText='Already have an account?'
+         title='Form information about you',
+         action='/auth/update',
+         fields=${infoFields},
+         buttonText='Confirm',
+         footerLink='/account',
+         footerText='return to account'
      )}"></div>
 </body>
 </html>
