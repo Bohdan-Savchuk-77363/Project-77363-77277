@@ -2,26 +2,34 @@ package com.web.controller;
 
 import com.web.entity.User;
 import com.web.entity.UserProfile;
+import com.web.repository.UserProfileRepository;
+import com.web.repository.UserRepository;
 import com.web.service.FormsUiService;
 import com.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/auth")
 public class AuthController {
 
     private final UserService userService;
+    private final UserProfileRepository userProfileRepository;
+    private final UserRepository userRepository;
 
     @Autowired
-    public AuthController(UserService userService) {
+    public AuthController(UserService userService, UserProfileRepository userProfileRepository, UserRepository userRepository) {
         this.userService = userService;
+        this.userProfileRepository = userProfileRepository;
+        this.userRepository = userRepository;
     }
 
 
@@ -49,7 +57,7 @@ public class AuthController {
             userService.logginig(user, password);
             User loggedUser = userService.logginig(user, password);
 
-            UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(loggedUser.getName(), null, List.of());
+            UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(loggedUser.getEmail(), null, List.of());
             SecurityContextHolder.getContext().setAuthentication(auth);
 
             return "redirect:/account";
@@ -61,18 +69,37 @@ public class AuthController {
     }
 
     @PostMapping("/update")
-    public String update(@RequestParam int age, @RequestParam String country, @RequestParam String photoUrl, Model model) {
+    public String update(@RequestParam int age, @RequestParam String country, @RequestParam(required = false) String photoUrl, Model model) {
         try {
-            UserProfile userProfile = new UserProfile();
+
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            String currentEmail = auth.getName();
+
+
+            User currentUser = userRepository.findByEmailIgnoreCase(currentEmail)
+                    .orElseThrow(() -> new RuntimeException("User not fount!!!"));
+//            UserProfile userProfile = userProfileRepository.findByUserId(currentUser.getId())
+//                    .orElseThrow(() -> new RuntimeException("User not fount!!!"));
+
+            UserProfile userProfile = userProfileRepository.findByUserId(currentUser.getId())
+                           .orElseGet(() -> {
+                            UserProfile newProfile = new UserProfile();
+                            newProfile.setUser(currentUser);
+                            return newProfile;
+                        });
             userProfile.setAge(age);
             userProfile.setCountry(country);
             userProfile.setPhotoUrl(photoUrl);
 
-            return "redirect: /account";
-        } catch (IllegalArgumentException e) {
 
+            userProfileRepository.save(userProfile);
+            return "redirect:/account";
+
+        } catch (IllegalArgumentException e) {
+            model.addAttribute("error", e.getMessage());
+            model.addAttribute("infoFields", FormsUiService.getLoginFields());
         }
 
-    return"hello";
+    return"public/authorization/user-information";
     }
 }

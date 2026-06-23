@@ -19,7 +19,7 @@ public class UserProfile {
     @Column(name = "preferences")
     private String preferences;
 
-    @Column(name = "photoUrl")
+    @Column(name = "photo_url", columnDefinition = "TEXT")
     private String photoUrl;
 
 

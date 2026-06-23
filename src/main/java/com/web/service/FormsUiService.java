@@ -18,7 +18,7 @@ public class FormsUiService {
     public static List<FormField> getLoginFields(){
         return List.of(
                 new FormField("email","Email", true, "email"),
-//                new FormField("photo", "Upload Photo", false, "file"),
+                //new FormField("photo", "Upload Photo", false, "file"),
                 new FormField("password","Password", true, "password"));
     }
 
@@ -26,7 +26,7 @@ public class FormsUiService {
         return List.of(
                 new FormField("age", "Enter your age",true,"int"),
                 new FormField("country", "Country",true,"text"),
-                new FormField("photo", "Photo",true,"file")
+                new FormField("photoUrl", "Photo",false,"url")
 
         );
     }
