@@ -1,5 +1,7 @@
 package com.web.service;
 
+import com.web.entity.UserProfile;
+import com.web.repository.UserProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
@@ -12,10 +14,14 @@ import com.web.repository.UserRepository;
 @Transactional
 public class    UserService {
     private final UserRepository userRepository;
+    private final UserProfileRepository userProfileRepository;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, UserProfileRepository userProfileRepository) {
         this.userRepository = userRepository;
+        this.userProfileRepository = userProfileRepository;
+
+
     }
     public void register(User user){
         if (user.getEmail() == null || user.getEmail().isBlank()){
@@ -50,7 +56,14 @@ public class    UserService {
         }
         return foundUser;
 
+    }
+    public  void infoUser(UserProfile userProfile, int age, String country, String photoUrl)
+    {
+        if(userProfile.getAge() > 0 || userProfile.getAge() > 100){
+            throw new IllegalArgumentException("You enter no real age");
 
+        }
+        userProfileRepository.save(userProfile);
     }
 
 

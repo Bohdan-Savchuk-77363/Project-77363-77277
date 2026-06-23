@@ -6,52 +6,39 @@ public class Book {
     private Double rating;
     private Integer reviews;
     private String img;
+    private String description;
+    private String googleBooksId;
 
-    public Book(String title, String author, Double rating, Integer reviews, String img) {
+    public Book(String title, String author, Double rating, Integer reviews, String img, String description, String googleBooksId) {
         this.title = title;
         this.author = author;
         this.rating = rating;
         this.reviews = reviews;
         this.img = img;
+        this.description = description;
+        this.googleBooksId = googleBooksId;
     }
 
-    public String getTitle() {
-        return title;
-    }
+    // --- Getters & Setters ---
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
 
-    public String getAuthor() {
-        return author;
-    }
+    public String getAuthor() { return author; }
+    public void setAuthor(String author) { this.author = author; }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+    public Double getRating() { return rating; }
+    public void setRating(Double rating) { this.rating = rating; }
 
-    public Double getRating() {
-        return rating;
-    }
+    public Integer getReviews() { return reviews; }
+    public void setReviews(Integer reviews) { this.reviews = reviews; }
 
-    public void setRating(Double rating) {
-        this.rating = rating;
-    }
+    public String getImg() { return img; }
+    public void setImg(String img) { this.img = img; }
 
-    public Integer getReviews() {
-        return reviews;
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
-    public void setReviews(Integer reviews) {
-        this.reviews = reviews;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
+    public String getGoogleBooksId() { return googleBooksId; }
+    public void setGoogleBooksId(String googleBooksId) { this.googleBooksId = googleBooksId; }
 }

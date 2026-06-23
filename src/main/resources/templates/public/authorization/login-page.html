@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link href="/style/authorization/authorization-page.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="/style/authorization/authorization-page.css" rel="stylesheet">
 </head>
 <body>
-<div class="page-wrapper">
-    <div class="container">
-        <div class="header-container">
-            <h2 class="header-container__text">Login</h2>
-        </div>
-        <div class="form-container">
-            <form th:action="@{/auth/login}" method="post" class="form-container__form">
-              <input type="email"    name="email"    placeholder="Email" required>
-              <input type="password" name="password" placeholder="password" required>
-              <button type="submit" class="form-container__button">Log in</button>
-                
-            </form>
-        </div>
-        
-      <div th:if="${error}" th:text="${error}" style="color:red"></div>
-      <div class="footer-link-container">
-        <span class="footer-link-container__text">Don't have an account? <a href="/registration" class="footer-link-container__link">Sign up</a></span>
-      
-      </div>
-    </div>
-    
-    </div>
-</div>
+<div th:replace="~{fragments/form-layout :: formLayout(
+         title='Login account',
+         action='/auth/login',
+         fields=${logFields},
+         buttonText='Login in account',
+         footerLink='/registration',
+         footerText='Haven\'t an account?'
+     )}"></div>
 </body>
 </html>
-
-
