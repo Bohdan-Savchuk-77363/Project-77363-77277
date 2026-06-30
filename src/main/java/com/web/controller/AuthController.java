@@ -13,9 +13,13 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
-import java.util.Optional;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/auth")
@@ -54,7 +58,6 @@ public class AuthController {
             user.setEmail(email);
 //            user.setName();
             user.setPassword(password);
-            userService.logginig(user, password);
             User loggedUser = userService.logginig(user, password);
 
             UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(loggedUser.getEmail(), null, List.of());
@@ -69,7 +72,7 @@ public class AuthController {
     }
 
     @PostMapping("/update")
-    public String update(@RequestParam int age, @RequestParam String country, @RequestParam(required = false) String photoUrl, Model model) {
+    public String update(@RequestParam int age, @RequestParam String country, @RequestParam(required = false) MultipartFile photoUrl, Model model) {
         try {
 
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -89,17 +92,29 @@ public class AuthController {
                         });
             userProfile.setAge(age);
             userProfile.setCountry(country);
-            userProfile.setPhotoUrl(photoUrl);
+
+            if(photoUrl != null && !photoUrl.isEmpty()){
+                String uploadDir = System.getProperty("user.home") + "/avatars/";
+                Path uploadPath = Paths.get(uploadDir);
+
+                if(!Files.exists(uploadPath)){
+                    Files.createDirectories(uploadPath);
+                }
+                String fileName = UUID.randomUUID().toString() + "_" + photoUrl.getOriginalFilename();
+                Path filePath = uploadPath.resolve(fileName);
+                photoUrl.transferTo(filePath.toFile());
+                userProfile.setPhotoUrl("/avatars/" + fileName);
+            }
 
 
             userProfileRepository.save(userProfile);
             return "redirect:/account";
 
-        } catch (IllegalArgumentException e) {
-            model.addAttribute("error", e.getMessage());
-            model.addAttribute("infoFields", FormsUiService.getLoginFields());
+        } catch (Exception e) { // Изменил на общий Exception, так как работа с файлами может бросать IOException
+            model.addAttribute("error", "Ошибка: " + e.getMessage());
+            model.addAttribute("infoFields", FormsUiService.getProfileFields()); // Вернул правильный сервис для профиля
+            return "public/authorization/user-information";
         }
 
-    return"public/authorization/user-information";
     }
 }
