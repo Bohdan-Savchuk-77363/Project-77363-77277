@@ -14,15 +14,10 @@
         </nav>
         
         <div class="icon-list">
-            <a th:href="@{/}" class="icon-link">
-                <svg class="icon-img">
-                    <use alt="search" th:href="@{/images/icon-sprite.svg#search}"></use>
-                </svg>
-            </a>
 
             <div sec:authorize="!isAuthenticated()">
-                <a th:href="@{/login}" class="icon-link">Log In</a>
-                <a th:href="@{/registration}" class="icon-link">Sign Up</a>
+                <a th:href="@{/login}" class="icon-link btn--blue">Log In</a>
+                <a th:href="@{/registration}" class="icon-link btn--orange">Sign Up</a>
             </div>
 
             <a sec:authorize="isAuthenticated()" th:href="@{/account}" class="icon-link">

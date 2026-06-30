@@ -35,8 +35,14 @@
 .btn--orange {
     background-color: var(--orange);
     color: var(--light);
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     stroke: var(--light);
+}
+
+.btn--blue {
+    background-color: #3A87E0;
+    color: var(--light);
+    padding: 1rem 2rem;
 }
 
 .btn-icon {
