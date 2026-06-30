@@ -6,7 +6,65 @@
 <body>
 <header th:replace="~{fragments/header :: header}"></header>
 
-<main style="height: 100vh;"></main>
+<main>
+  <div class="container">
+    <div class="book-detail" th:if="${book != null}">
+
+      <div class="book-detail__cover">
+        <img th:src="${book.img}" th:alt="${book.title}" class="book-detail__img">
+      </div>
+
+      <div class="book-detail__info">
+        <h1 class="book-detail__title" th:text="${book.title}">Title</h1>
+        <p class="book-detail__author" th:text="${book.author}">Author</p>
+
+        <div class="book-detail__rating">
+          <span class="book-detail__stars" th:title="'Rating: ' + ${book.rating}">
+            <span th:if="${book.rating >= 1}">★</span><span th:if="${book.rating >= 2}">★</span><span th:if="${book.rating >= 3}">★</span><span th:if="${book.rating >= 4}">★</span><span th:if="${book.rating >= 5}">★</span>
+            <span th:if="${book.rating == 0}" style="color: var(--gray-color);">☆☆☆☆☆</span>
+          </span>
+          <span class="book-detail__rating-value" th:text="${book.rating > 0 ? #numbers.formatDecimal(book.rating, 1, 1) : 'No ratings'}"></span>
+          <span class="book-detail__reviews" th:if="${book.reviews > 0}" th:text="'(' + ${book.reviews} + ' reviews)'"></span>
+        </div>
+
+        <p class="book-detail__desc" th:text="${book.description}">Description</p>
+
+        <div class="book-detail__meta">
+          <div class="book-detail__meta-item" th:if="${book.publisher != null and !book.publisher.isEmpty()}">
+            <span class="book-detail__meta-label">Publisher</span>
+            <span class="book-detail__meta-value" th:text="${book.publisher}">Publisher</span>
+          </div>
+          <div class="book-detail__meta-item" th:if="${book.publishedDate != null and !book.publishedDate.isEmpty()}">
+            <span class="book-detail__meta-label">Published</span>
+            <span class="book-detail__meta-value" th:text="${book.publishedDate}">Date</span>
+          </div>
+          <div class="book-detail__meta-item" th:if="${book.pageCount != null and book.pageCount > 0}">
+            <span class="book-detail__meta-label">Pages</span>
+            <span class="book-detail__meta-value" th:text="${book.pageCount}">0</span>
+          </div>
+          <div class="book-detail__meta-item" th:if="${book.categories != null and !book.categories.isEmpty()}">
+            <span class="book-detail__meta-label">Categories</span>
+            <span class="book-detail__meta-value" th:text="${book.categories}">Categories</span>
+          </div>
+          <div class="book-detail__meta-item" th:if="${book.language != null and !book.language.isEmpty()}">
+            <span class="book-detail__meta-label">Language</span>
+            <span class="book-detail__meta-value" th:text="${book.language}">EN</span>
+          </div>
+          <div class="book-detail__meta-item" th:if="${book.previewLink != null and !book.previewLink.isEmpty()}">
+            <span class="book-detail__meta-label">Preview</span>
+            <a th:href="${book.previewLink}" target="_blank" class="btn btn--orange">Preview on Google Books</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="book-detail--not-found" th:if="${book == null}">
+      <h2>Book not found</h2>
+      <a th:href="@{/}" class="btn btn--orange">Back to Home</a>
+    </div>
+  </div>
+</main>
 
 <footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>

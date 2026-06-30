@@ -38,6 +38,11 @@ public class PageController {
         return "account";
     }
 
+    @GetMapping("/about")
+    public String aboutPage() {
+        return "about";
+    }
+
     @GetMapping("/catalog")
     public String catalog() {
         return "catalog";

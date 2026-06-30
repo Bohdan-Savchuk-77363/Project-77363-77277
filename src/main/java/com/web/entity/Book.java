@@ -8,6 +8,14 @@ public class Book {
     private String img;
     private String description;
     private String googleBooksId;
+    private Integer pageCount;
+    private String publisher;
+    private String publishedDate;
+    private String categories;
+    private String language;
+    private String previewLink;
+
+    public Book() {}
 
     public Book(String title, String author, Double rating, Integer reviews, String img, String description, String googleBooksId) {
         this.title = title;
@@ -18,8 +26,6 @@ public class Book {
         this.description = description;
         this.googleBooksId = googleBooksId;
     }
-
-    // --- Getters & Setters ---
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
@@ -41,4 +47,22 @@ public class Book {
 
     public String getGoogleBooksId() { return googleBooksId; }
     public void setGoogleBooksId(String googleBooksId) { this.googleBooksId = googleBooksId; }
+
+    public Integer getPageCount() { return pageCount; }
+    public void setPageCount(Integer pageCount) { this.pageCount = pageCount; }
+
+    public String getPublisher() { return publisher; }
+    public void setPublisher(String publisher) { this.publisher = publisher; }
+
+    public String getPublishedDate() { return publishedDate; }
+    public void setPublishedDate(String publishedDate) { this.publishedDate = publishedDate; }
+
+    public String getCategories() { return categories; }
+    public void setCategories(String categories) { this.categories = categories; }
+
+    public String getLanguage() { return language; }
+    public void setLanguage(String language) { this.language = language; }
+
+    public String getPreviewLink() { return previewLink; }
+    public void setPreviewLink(String previewLink) { this.previewLink = previewLink; }
 }

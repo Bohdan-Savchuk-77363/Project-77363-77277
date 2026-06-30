@@ -79,4 +79,47 @@ public class GoogleBooksService {
     public List<Book> searchBooks(String query) {
         return fetchBooks(query, defaultMaxResult);
     }
+
+    public Book getBookById(String id) {
+        String url = String.format("%s/%s?key=%s", apiUrl, id, apiKey);
+        try {
+            String response = restTemplate.getForObject(url, String.class);
+            JsonNode item = objectMapper.readTree(response);
+            JsonNode volumeInfo = item.path("volumeInfo");
+
+            Book book = new Book();
+            book.setGoogleBooksId(item.path("id").asText(""));
+            book.setTitle(volumeInfo.path("title").asText("Unknown Title"));
+
+            List<String> authors = new ArrayList<>();
+            volumeInfo.path("authors").forEach(a -> authors.add(a.asText()));
+            book.setAuthor(authors.isEmpty() ? "Unknown Author" : String.join(", ", authors));
+
+            book.setRating(volumeInfo.path("averageRating").asDouble(0.0));
+            book.setReviews(volumeInfo.path("ratingsCount").asInt(0));
+
+            String img = volumeInfo
+                    .path("imageLinks")
+                    .path("thumbnail")
+                    .asText("https://placehold.co/200x300/2C3038/F0F0F0?text=No+Cover");
+            book.setImg(img.replace("http://", "https://"));
+
+            book.setDescription(volumeInfo.path("description").asText(""));
+            book.setPageCount(volumeInfo.path("pageCount").asInt(0));
+            book.setPublisher(volumeInfo.path("publisher").asText(""));
+            book.setPublishedDate(volumeInfo.path("publishedDate").asText(""));
+
+            List<String> categories = new ArrayList<>();
+            volumeInfo.path("categories").forEach(c -> categories.add(c.asText()));
+            book.setCategories(categories.isEmpty() ? "" : String.join(", ", categories));
+
+            book.setLanguage(volumeInfo.path("language").asText(""));
+            book.setPreviewLink(volumeInfo.path("previewLink").asText(""));
+
+            return book;
+        } catch (Exception exception) {
+            System.err.println("Google books API error (getBookById): " + exception.getMessage());
+            return null;
+        }
+    }
 }

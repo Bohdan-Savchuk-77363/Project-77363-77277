@@ -13,6 +13,7 @@
 @import "temp.css";
 @import "about.css";
 @import "katalog.css";
+@import "book-page.css";
 
 :root {
     --gray-color: #bebebe;
