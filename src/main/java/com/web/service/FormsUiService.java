@@ -26,7 +26,7 @@ public class FormsUiService {
         return List.of(
                 new FormField("age", "Enter your age",true,"int"),
                 new FormField("country", "Country",true,"text"),
-                new FormField("photoUrl", "Photo",false,"url")
+                new FormField("photoUrl", "Photo",false,"file")
 
         );
     }

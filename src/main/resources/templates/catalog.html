@@ -1,205 +1,61 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 
-    <head th:replace="~{fragments/head :: head}"></head>
+<head th:replace="~{fragments/head :: head}"></head>
 
 <body>
-    <header th:replace="~{fragments/header :: header}"></header>
+<header th:replace="~{fragments/header :: header}"></header>
 
-    <main>
-        <div class="container">
+<main>
+    <div class="container">
 
-            <section class="katalog">
+        <section class="katalog">
 
-                <div class="user-account__data">
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
+            <form th:action="@{/catalog}" method="get" class="search-form">
+                <input type="text" name="q" th:value="${query}" placeholder="Search books..."
+                       class="search-input">
+                <button type="submit" class="btn btn--big">Search</button>
+            </form>
 
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
+            <div class="user-account__data" th:if="${not #lists.isEmpty(books)}">
+                <div class="user__book-card" th:each="book : ${books}">
+                    <img th:src="${book.img}" th:alt="${book.title}" class="user__book-card-img">
+                    <div class="user__book-card-body">
+                        <h3 class="user__book-card-title" th:text="${book.title}">book title</h3>
+                        <p class="user__book-card-author" th:text="${book.author}">author</p>
+                        <div class="user__book-card-stars">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                            <span class="user__book-card__rating-count"
+                                  th:text="${book.reviews > 0 ? book.reviews : 'No ratings'}">25.111</span>
                         </div>
                     </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="user__book-card">
-                        <img src="https://placehold.co/175x250" alt="book.title" class="user__book-card-img">
-
-                        <div class="user__book-card-body">
-                            <h3 class="user__book-card-title">book title</h3>
-                            <p class="user__book-card-author">author</p>
-                            <div class="user__book-card-stars">
-                                ★★★★★
-                                <span class="user__book-card__rating-count">25.111</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+            </div>
 
-            </section>
-        </div>
-    </main>
+            <div th:if="${#lists.isEmpty(books)}" class="no-results">
+                <p>No books found for "<span th:text="${query}">query</span>".</p>
+            </div>
 
-    <footer th:replace="~{fragments/footer :: footer}"></footer>
+            <div class="pagination" th:if="${totalPages > 1}">
+                <a th:href="@{/catalog(q=${query}, page=0)}" class="page-link"
+                   th:classappend="${currentPage == 0} ? 'disabled' : ''">&laquo;</a>
+                <a th:href="@{/catalog(q=${query}, page=${currentPage - 1})}" class="page-link"
+                   th:classappend="${currentPage == 0} ? 'disabled' : ''">&lsaquo;</a>
+                <a th:each="i : ${#numbers.sequence(0, totalPages - 1)}"
+                   th:href="@{/catalog(q=${query}, page=${i})}"
+                   class="page-link"
+                   th:classappend="${i == currentPage} ? 'active' : ''"
+                   th:text="${i + 1}">1</a>
+                <a th:href="@{/catalog(q=${query}, page=${currentPage + 1})}" class="page-link"
+                   th:classappend="${currentPage >= totalPages - 1} ? 'disabled' : ''">&rsaquo;</a>
+                <a th:href="@{/catalog(q=${query}, page=${totalPages - 1})}" class="page-link"
+                   th:classappend="${currentPage >= totalPages - 1} ? 'disabled' : ''">&raquo;</a>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

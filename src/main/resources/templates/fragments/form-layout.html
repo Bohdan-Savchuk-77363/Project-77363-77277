@@ -4,7 +4,7 @@
   <div class="page-wrapper">
     <div class="container">
       <div class="header-container__text" th:text="${title}">title</div>
-      <form th:action="${action}" method="post" class="form-container__form">
+      <form th:action="${action}" method="post" enctype="multipart/form-data" class="form-container__form">
         <div th:each="field : ${fields}" class="form-container__input-wrapper">
           <input th:type="${field.type}"
                  th:name="${field.name}"
