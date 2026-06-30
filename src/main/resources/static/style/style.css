@@ -12,6 +12,7 @@
 @import "account.css";
 @import "temp.css";
 @import "about.css";
+@import "katalog.css";
 
 :root {
     --gray-color: #bebebe;

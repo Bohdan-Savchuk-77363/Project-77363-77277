@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <header th:fragment="header" class="header">
         <a th:href="@{/}" class="header-logo">
             <img class="header-logo-img" th:src="@{/images/logo.svg}" alt="VistulaBook logo">
@@ -13,12 +14,13 @@
         </nav>
         
         <div class="icon-list">
-            <a th:href="@{/}" class="icon-link">
-                <svg class="icon-img">
-                    <use alt="search" th:href="@{/images/icon-sprite.svg#search}"></use>
-                </svg>
-            </a>
-            <a th:href="@{/account}" class="icon-link">
+
+            <div sec:authorize="!isAuthenticated()">
+                <a th:href="@{/login}" class="icon-link btn--blue">Log In</a>
+                <a th:href="@{/registration}" class="icon-link btn--orange">Sign Up</a>
+            </div>
+
+            <a sec:authorize="isAuthenticated()" th:href="@{/account}" class="icon-link">
                 <svg class="icon-img">
                     <use alt="account" th:href="@{/images/icon-sprite.svg#account}"></use>
                 </svg>
