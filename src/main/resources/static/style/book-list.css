@@ -28,12 +28,19 @@
     background-color: #202020;
 
     transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
 
     &:hover {
         transform: translateY(-6px);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
     }
+}
+
+.book-card-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
 }
 
 /* Star */
